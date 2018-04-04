@@ -1,6 +1,12 @@
 export class App {
-  constructor() {
-    this.message = 'Hello World!';
+  configureRouter(config, router) {
+    this.router = router;
+    config.title = 'StudyHub';
+    config.map([
+      { route: ['', 'home'],       name: 'home',       moduleId: 'home/home', nav: true },
+      { route: 'welcome',            name: 'welcome',      moduleId: 'welcome/welcome', nav: true, title: 'welcome' },
+      
+    ]);
   }
 }
 
