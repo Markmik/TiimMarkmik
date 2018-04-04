@@ -1,3 +1,124 @@
 <template>
-  <h1>${message}</h1>
+	<require from="./styles.css"></require>
+	
+  <body style="background-image:url('library.jpg')">
+
+
+<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login</button>
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+<button onclick="document.getElementById('id03').style.display='block'" style="width:auto;">Lisa Märge</button>
+<button onclick="document.getElementById('id04').style.display='block'" style="width:auto;">Lisa Meeldetuletus</button>
+
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php" >
+    <div class="container" >
+      <header><img src="image.jpg" width="100%" height="100%" alt=""/></header>
+      
+      
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+      
+      <label for="username"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+      
+      
+      <div class="clearfix">
+        
+        <button type="submit" class="signupbtn">Sign Up</button>
+		  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      </div>
+    </div>
+  </form>
+</div>
+	
+<div id="id02" class="modal">
+  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php" >
+    <div class="container" >
+      <header><img src="image.jpg" width="100%" height="100%" alt=""/></header>
+      
+      
+      <hr>
+      
+      
+      <label for="username"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      
+      
+      
+      
+      <div class="clearfix">
+        
+        <button type="submit" class="signupbtn2" style="width: '100%';">Log In</button>
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+      </div>
+    </div>
+  </form>
+</div>
+	
+<div id="id03" class="modal">
+  <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php" >
+    <div class="container" >
+      <header><img src="image.jpg" width="100%" height="100%" alt=""/></header>
+      
+      
+      <hr>
+      <label for="email"><b></b></label>
+      <textarea placeholder="Enter Subject" name="email" required></textarea>
+      <hr>
+      <label for="email"><b></b></label>
+      <textarea placeholder="Enter Subject" name="email" required></textarea>
+      
+      
+      
+      <div class="clearfix">
+        
+        <button type="submit" class="signupbtn">Submit</button>
+		  <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+      </div>
+    </div>
+  </form>
+</div>
+	
+<div id="id04" class="modal">
+  <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php" >
+    <div class="container" >
+      <header><img src="image.jpg" width="100%" height="100%" alt=""/></header>
+      
+      
+      <hr>
+      <label for="date"><b></b></label>
+      <input type="date" name="bday">
+		<input type="time" name="usr_time">
+      <hr>
+      <label for="email"><b></b></label>
+      <textarea placeholder="Enter Subject" name="email" required></textarea>
+      
+      
+      
+      <div class="clearfix">
+        
+        <button type="submit" class="signupbtn">Submit</button>
+		  <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Cancel</button>
+      </div>
+    </div>
+  </form>
+</div>
+</body>
 </template>
