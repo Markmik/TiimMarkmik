@@ -1,7 +1,7 @@
 export class App {
   configureRouter(config, router) {
     this.router = router;
-    config.title = 'StudyHub';
+    config.title = 'Markmik';
     config.map([
       { route: ['', 'home'],       name: 'home',       moduleId: 'home/home', nav: true },
       { route: 'welcome', name: 'welcome', moduleId: 'welcome/welcome', nav: true, title: 'welcome' },
