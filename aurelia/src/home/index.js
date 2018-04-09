@@ -5,7 +5,7 @@ export class Home {
 	activate() {
 		let client = new HttpClient();
 
-		client.fetch('http://localhost:8080/user')
+		client.fetch('http://localhost:8080/users')
 			.then(response => response.json())
 			.then(users => this.userList = users);
 	}
@@ -13,7 +13,7 @@ export class Home {
 	addUser() {
 		let client = new HttpClient();
 		console.log();
-		client.fetch('http://localhost:8080/user/add', {
+		client.fetch('http://localhost:8080/users/add', {
 			'method': "POST",
 			'body': json(this.userData)
 		})

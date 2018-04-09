@@ -10,20 +10,34 @@ export class Welcome {
 			.then(notes => this.noteList = notes);
 	}
 
-	addUser() {
+	addNote() {
 		let client = new HttpClient();
 
-		client.fetch('http://localhost:8080/note/add', {
+		client.fetch('http://localhost:8080/notes/add', {
 			'method': "POST",
 			'body': json(this.noteData)
 		})
 			.then(response => response.json())
 			.then(data => {
 				console.log("Server saatis " + data.title);
+				document.getElementById('id03_note').style.display='none'
 		});
 
 		console.log("Method executed!")
 	}
+	removeNote(noteId){
+      let client = new HttpClient();
+
+      client.fetch('http://localhost:8080/notes/' + noteId, {
+        'method': 'DELETE'
+      }).then(() => {
+        	
+			console.log("kustutas ");
+
+      });
+  	}
+
+  
 
 
 }

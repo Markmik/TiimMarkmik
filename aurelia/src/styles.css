@@ -1,5 +1,11 @@
 
-
+textarea {
+    width: 95%;
+}
+textarea.txt {
+    width: 95%;
+    min-height: 200px;
+}
 .container2 {
     
     margin-top: 20%; 
