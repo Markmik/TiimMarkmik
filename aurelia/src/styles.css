@@ -7,7 +7,17 @@
     margin-right: 30%;
     width: 20%;
     min-height: 200px;
-    background-color: #3e4444;
+    background: url(divdiv.jpg);
+}
+.container_notes {
+    
+    margin: auto;
+    width: 60%;
+    min-height: 1000px;
+    background: url(parchment.png);
+}
+.notes_header {
+    background-color: blue;
 }
 body{
   background: url(library.jpg);
@@ -54,6 +64,14 @@ header {
     padding: 14px 20px;
     
     min-width: 70%;
+   
+}
+.modalbtn2 {
+   
+    background-color: #405d27;
+    
+    
+    
    
 }
 /* Extra styles for the cancel button */
