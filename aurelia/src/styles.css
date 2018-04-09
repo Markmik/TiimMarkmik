@@ -16,8 +16,23 @@
     min-height: 1000px;
     background: url(parchment.png);
 }
-.notes_header {
-    background-color: blue;
+.notes_hdr {
+    height:100px;
+}
+.note_title {
+    margin: auto;
+    
+    margin-left:20%;
+}
+.note_single {
+    
+    margin: 20px;
+    border-style: outset;
+}
+.note_text{
+    margin: auto;
+    
+    margin-left:5%;
 }
 body{
   background: url(library.jpg);

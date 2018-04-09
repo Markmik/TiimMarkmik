@@ -6,16 +6,16 @@
 
 
 <div class="container_notes">
-  <div class="notes_header" style="width:100%; margin-top: 20px;" >
-    <button class="modalbtn2" onclick="document.getElementById('id03_note').style.display='block'" style="width:auto; float: right;">Lisa Märge</button>
+  <div class="notes_hdr"  >
+    <button class="modalbtn2" onclick="document.getElementById('id03_note').style.display='block'" style="width:auto; float: right;">Add Note</button>
     
   </div>
   <div class="notes_text" style="width:100%; margin-top: 20px;" >
     <p>
     
-    <ul>
-      <li repeat.for="note of noteList">${note.title} ${note.text}</li>
-    </ul>
+    
+      <div repeat.for="note of noteList" id=${note.id} class="note_single"> <div class="note_title"><h2>${note.title}</h2></div> <div class="note_text">${note.text}</div></div>
+    
   </p>
   </div>
 </div>
