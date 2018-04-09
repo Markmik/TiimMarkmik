@@ -39,6 +39,7 @@ textarea.txt {
     margin: auto;
     
     margin-left:5%;
+    margin-right: 15%;
 }
 body{
   background: url(library.jpg);
@@ -94,6 +95,12 @@ header {
     
     
    
+}
+.deletebtn {
+    width: 15%;
+    
+    background-color: #563f46;
+    float: right;
 }
 /* Extra styles for the cancel button */
 .cancelbtn {
