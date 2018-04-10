@@ -26,4 +26,8 @@ public class RemindersService {
     public Reminders getRemindersById(long userId) {
         return reminderRepository.findOne(userId);
     }
+    
+    public void deleteReminderById(long reminderId) {
+        reminderRepository.delete(reminderId);
+    }
 }

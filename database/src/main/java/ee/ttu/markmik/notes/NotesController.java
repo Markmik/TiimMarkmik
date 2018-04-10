@@ -1,5 +1,6 @@
 package ee.ttu.markmik.notes;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -27,6 +28,14 @@ public class NotesController {
     @RequestMapping(value = "/notes/{id}", method=RequestMethod.GET)
     public Notes getNote(@PathVariable("userId") long userId) {
         return noteService.getNotesById(userId);
+    }
+    
+    @DeleteMapping(value = "/notes/{id}")
+    @ResponseStatus(value = HttpStatus.OK)
+    public void deleteUser(@PathVariable("id") Long idx) {
+
+        noteService.deleteNoteById(idx);
+        
     }
 
 }

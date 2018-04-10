@@ -6,7 +6,9 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.List;
 
 @Entity
@@ -19,7 +21,8 @@ public class Reminders {
     private String title;
     private String text;
     private Long user_id;
-    private LocalDateTime alarmTime;
+    private String alarmDate;
+    private String alarmTime;
     
 
     @ManyToOne

@@ -15,8 +15,8 @@ public class NotesService {
         this.noteRepository = userRepository;
     }
 
-    public Notes addNote(Notes user) {
-        return noteRepository.save(user);
+    public Notes addNote(Notes note) {
+        return noteRepository.save(note);
     }
 
     public List<Notes> getAllNotes() {
@@ -25,5 +25,9 @@ public class NotesService {
 
     public Notes getNotesById(long userId) {
         return noteRepository.findOne(userId);
+    }
+    
+    public void deleteNoteById(long noteId) {
+        noteRepository.delete(noteId);
     }
 }
