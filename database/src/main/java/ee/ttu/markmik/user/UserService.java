@@ -30,6 +30,12 @@ public class UserService {
     public void deleteUserById(long userId) {
         userRepository.delete(userId);
     }
+    
+    List<User> searchUsersByLogin(String email, String pass) {
+		return userRepository.findByLastName(email, pass);
+	}
+    
+    
 
 	
 }

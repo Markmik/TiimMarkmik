@@ -23,6 +23,7 @@ export class Home {
 		});
 
 		console.log("Method executed!");
+		document.getElementById('id01_signup').style.display='none'
 	}
 	}
 
