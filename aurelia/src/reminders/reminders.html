@@ -1,9 +1,14 @@
 <template bindable="router">
+  <require from="nav-bar.html"></require>
+    <nav-bar router.bind="router"></nav-bar>
 <body>
 
 	<div class="container_notes">
   <div class="notes_hdr"  >
     <button class="modalbtn2" onclick="document.getElementById('id04_reminder').style.display='block'" style="width:auto; float: right;">Add Reminder</button>
+    <form action="/#/addReminder">
+    <input type="submit" value="Go to Google" />
+</form>
     
   </div>
   <div class="notes_text" style="width:100%; margin-top: 20px;" >

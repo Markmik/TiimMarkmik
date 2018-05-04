@@ -5,9 +5,9 @@ export class App {
     config.title = 'Markmik';
     config.map([
       { route: ['', 'home'],       name: 'home',       moduleId: 'home/index', nav: true },
-      { route: 'welcome', name: 'welcome', moduleId: 'welcome/welcome', nav: true, title: 'welcome' },
-      { route: 'notes', name: 'notes', moduleId: 'notes/notes', nav: true, title: 'notes' },
-      { route: 'reminders', name: 'reminders', moduleId: 'reminders/reminders', nav: true, title: 'reminders' },
+      { route: 'Welcome', name: 'Welcome', moduleId: 'welcome/welcome', nav: true, title: 'Welcome' },
+      { route: 'Notes', name: 'Notes', moduleId: 'notes/notes', nav: true, title: 'Notes' },
+      { route: 'Reminders', name: 'Reminders', moduleId: 'reminders/reminders', nav: true, title: 'Reminders' },
       
     ]);
   }
