@@ -3,27 +3,8 @@
 		<require from="nav-bar.html"></require>
     <nav-bar router.bind="router"></nav-bar>
   <body style="background-image:url('library.jpg')">
-    
-
-
-<div class="container_notes">
-  <div class="notes_hdr"  >
-    <button class="modalbtn2" onclick="window.location.href='#/notesadd'" style="width:auto; float: right;">Add Note</button>
-    
-  </div>
-  <div class="notes_text" style="width:100%; margin-top: 20px;" >
-    <p>
-    
-    
-      <div repeat.for="note of noteList" id=${note.id} class="note_single"><div class="note_title"><h2>${note.title}</h2><button click.delegate="removeNote(note.id)" class="deletebtn">Delete</button></div> <div class="note_text">${note.text}</div><br><br> </div>
-  </p>
-  </div>
-</div>
-
-
-
 	
-<div id="id03_note" class="modal">
+<div id="id03_note" class="modal2">
   <span onclick="document.getElementById('id03_note').style.display='none'" class="close" title="Close Modal">&times;</span>
   <form class="modal-content" submit.delegate="addNote()" >
     <div class="container" >

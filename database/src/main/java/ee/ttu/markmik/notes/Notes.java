@@ -16,7 +16,8 @@ public class Notes {
     private Long id;
     private String title;
     private String text;
-    private Long user_id;
+    private Long usercode;
+    private Long userid;
     
 
     @ManyToOne

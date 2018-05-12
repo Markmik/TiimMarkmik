@@ -40,7 +40,8 @@ export class Notes {
 			console.log("kustutas ");
 
       });
-    
+    var elem = document.getElementById(string(noteId));
+    elem.parentNode.removeChild(elem);
   	}
 
   

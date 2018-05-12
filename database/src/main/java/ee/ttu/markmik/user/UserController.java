@@ -41,9 +41,9 @@ public class UserController {
     
     @RequestMapping(value = "/users/search/{searchStr}", method=RequestMethod.GET)
 	public List<User> searchUsers(@PathVariable("searchStr") String searchStr) {
-    	String[] splited = searchStr.split("\\s+");
     	
-		return userService.searchUsersByLogin(splited[0],splited[1]);
+    	
+		return userService.searchUsersByUsername(searchStr);
 	}
     
 }

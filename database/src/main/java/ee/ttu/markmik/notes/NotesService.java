@@ -3,6 +3,8 @@ package ee.ttu.markmik.notes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import ee.ttu.markmik.user.User;
+
 import java.util.List;
 
 @Service
@@ -23,11 +25,13 @@ public class NotesService {
         return noteRepository.findAll();
     }
 
-    public Notes getNotesById(long userId) {
-        return noteRepository.findOne(userId);
+    List<Notes> searchNotesByUsercode(long usercode) {
+        return noteRepository.findByUsercode(usercode);
     }
     
     public void deleteNoteById(long noteId) {
         noteRepository.delete(noteId);
     }
+
+	
 }

@@ -20,7 +20,7 @@ public class Reminders {
     private Long id;
     private String title;
     private String text;
-    private Long user_id;
+    private Long userid;
     private String alarmDate;
     private String alarmTime;
     

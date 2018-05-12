@@ -8,7 +8,7 @@ export class App {
       { route: 'Welcome', name: 'Welcome', moduleId: 'welcome/welcome', nav: true, title: 'Welcome' },
       { route: 'Notes', name: 'Notes', moduleId: 'notes/notes', nav: true, title: 'Notes' },
       { route: 'Reminders', name: 'Reminders', moduleId: 'reminders/reminders', nav: true, title: 'Reminders' },
-      
+      { route: 'NotesAdd', name: 'NotesAdd', moduleId: 'notes/notesadd', nav: true, title: 'addNote' },
     ]);
   }
   

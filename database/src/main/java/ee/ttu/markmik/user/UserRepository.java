@@ -13,13 +13,9 @@ public interface UserRepository extends CrudRepository<User, Long> {
     @Override
     public List<User> findAll();
     
-    public List<User> findByLastName(String email, String pass);
+    public List<User> findByUsername(String email);
 	
-	@Query("SELECT U FROM User U"
-			+ " JOIN U.pens P"
-			+ " WHERE P.color=:color"
-			+ " GROUP BY U")
-	public List<User> findByLogin(@Param("eMail") String color);
+	
 	
 }
 
