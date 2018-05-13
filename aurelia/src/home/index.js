@@ -66,8 +66,8 @@ export class Home {
 				
 				document.getElementById('save').className=this.userList[i]['userid'];
 	
-				document.getElementById('id02_login').style.display='none'
-				s
+				document.getElementById('id02_login').style.display='none';
+				document.location.href = '/#/notes';
 				return;
 
 			} 

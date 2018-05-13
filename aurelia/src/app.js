@@ -1,4 +1,5 @@
 import {HttpClient, json} from 'aurelia-fetch-client'
+
 export class App {
   configureRouter(config, router) {
     this.router = router;

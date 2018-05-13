@@ -6,8 +6,15 @@ export class Notes {
 	noteListByCode = []
 	activate() {
 		let client = new HttpClient();
+		try {
+		    var test=parseInt(document.getElementById('save').className);
+		}
+		catch(err) {
+		    document.location.href = '/#/';
+		}
 		
-
+		console.log(this.userList);
+		console.log("ntes");
 		client.fetch('http://localhost:8080/note/'+document.getElementById('save').className)
 			.then(response => response.json())
 			.then(notes => this.noteList = notes);

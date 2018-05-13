@@ -51,7 +51,7 @@ body{
   background: url(library.jpg);
 }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=email] {
     width: 90%;
     padding: 15px;
     margin: 5px 0 22px 0;
@@ -61,7 +61,7 @@ input[type=text], input[type=password] {
 }
 
 /* Add a background color when the inputs get focus */
-input[type=text]:focus, input[type=password]:focus {
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
     background-color: #ddd;
     outline: none;
 }
