@@ -45,8 +45,10 @@ export class Notes {
       }).then(() => {
         	
 			console.log("kustutas ");
+			document.location.href = '/#/notered';
 
       });
+
     
   	}
 
