@@ -1,52 +1,24 @@
 <template bindable="router">
-	
-		
-  <body style="background-image:url('library.jpg')">
-    
+  <require from="nav-bar.html"></require>
+    <nav-bar router.bind="router"></nav-bar>
+<body>
 
-
-<div class="container_notes">
+  <div class="container_notes">
   <div class="notes_hdr"  >
-    <button class="modalbtn2" onclick="document.getElementById('id03_note').style.display='block'" style="width:auto; float: right;">Add Note</button>
+    
+    
+</form>
     
   </div>
   <div class="notes_text" style="width:100%; margin-top: 20px;" >
     <p>
     
     
-      <div repeat.for="note of noteList" id=${note.id} class="note_single"><div class="note_title"><h2>${note.title}</h2><button click.delegate="removeNote(note.id)" class="deletebtn">Delete</button></div> <div class="note_text">${note.text}</div><br><br> </div>
+      <div repeat.for="reminder of reminderList2" id=${reminder.id} class="note_single" style="border-color: red;"><div class="note_title"><h2>${reminder.title}</h2><button click.delegate="removeReminder(reminder.id)" class="deletebtn">Delete</button></div> <div class="note_text">${reminder.text}</div></br></br><center><div class="note_datetime">${reminder.alarmDate} ${reminder.alarmTime} </div></center> </div>
   </p>
   </div>
 </div>
-
-
-
-	
-<div id="id03_note" class="modal">
-  <span onclick="document.getElementById('id03_note').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <form class="modal-content" submit.delegate="addNote()" >
-    <div class="container" >
-      <header><img src="image.jpg" width="100%" height="100%" alt=""/></header>
-      
-      
-      <hr>
-      <label for="title"><b></b></label>
-      <textarea placeholder="Enter Title" name="title" value.bind="noteData.title"  required></textarea>
-      <hr>
-      <label for="email"><b></b></label>
-      <textarea class="txt" placeholder="Enter Text" name="text" value.bind="noteData.text"  required></textarea>
-      
-      
-      
-      <div class="clearfix">
-        
-        <button type="submit" class="signupbtn">Submit</button>
-		  <button type="button" onclick="document.getElementById('id03_note').style.display='none'" class="cancelbtn">Cancel</button>
-      </div>
-    </div>
-  </form>
-</div>
-	
+  
 
 </body>
-</template>
+</template>>

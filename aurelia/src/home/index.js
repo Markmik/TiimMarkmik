@@ -5,6 +5,7 @@ export class Home {
 	userData = {}
 	userList = []
 	activate() {
+
 		let client = new HttpClient();
 
 		client.fetch('http://localhost:8080/users')
@@ -38,19 +39,31 @@ export class Home {
 		})
 			.then(response => response.json())
 			.then(data => {
-				console.log("Server saatis " + data.username);
+				this.userList.push(data);
 		});
 		console.log("Method executed!");
 		document.getElementById('id01_signup').style.display='none'
+
+
+		
+		
 
 		
 
 	}
 	
+	
 	login() {
+		let client = new HttpClient();
+
+		client.fetch('http://localhost:8080/users')
+			.then(response => response.json())
+			.then(users => this.userList = users);
+			
+		console.log(this.userList);
 		for (var i = 0; i < this.userList.length; i++) {
 			var valid = false;
-			console.log(this.userList);
+			
 			if(this.userList[i]['username'] == this.login_username) {
 				valid=true;
 			} else {

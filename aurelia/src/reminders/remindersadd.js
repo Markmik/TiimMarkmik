@@ -31,11 +31,12 @@ export class Reminders {
 			.then(response => response.json())
 			.then(data => {
 				
-				console.log("Server saatis " + data.title);
-				document.getElementById('id04_reminder').style.display='none'
+				console.log("Server saatis " + data.alarmDate);
+				document.location.href = '/#/reminders';
 		});
 
-		console.log("Method executed!")
+		
+
 	}
 	removeReminder(reminderId){
       let client = new HttpClient();
@@ -45,7 +46,6 @@ export class Reminders {
       }).then(() => {
         	
 			console.log("kustutas ");
-			document.location.href = '/#/Reminders';
 			
 
       });

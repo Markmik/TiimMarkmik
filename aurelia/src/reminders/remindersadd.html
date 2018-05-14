@@ -1,0 +1,37 @@
+<template bindable="router">
+  <require from="nav-bar.html"></require>
+    <nav-bar router.bind="router"></nav-bar>
+<body>
+
+	
+	
+<div id="id04_reminder" class="modal2">
+  <span onclick="window.location.href='#/Reminders'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" submit.delegate="addReminder()"  >
+    <div class="container" >
+      <header><img src="image.jpg" width="100%" height="100%" alt=""/></header>
+      
+      
+      <hr>
+      <label for="date"><b></b></label>
+      <input type="date" name="date" value.bind="reminderData.alarmDate" required>
+		<input type="time" name="time" value.bind="reminderData.alarmTime" required>
+      <hr>
+      <label for="title"><b></b></label>
+      <textarea placeholder="Enter Title" name="title" value.bind="reminderData.title" required></textarea>
+      <label for="text"><b></b></label>
+      <textarea placeholder="Enter Text" class="txt" name="text" value.bind="reminderData.text" required></textarea>
+      <input type="number" id="userID" value.bind="reminderData.usercode"  style="visibility: hidden;">
+      
+      
+      
+      <div class="clearfix">
+        
+        <button type="submit" class="signupbtn">Submit</button>
+		  <button type="button" onclick="window.location.href='#/Reminders'" class="cancelbtn">Cancel</button>
+      </div>
+    </div>
+  </form>
+</div>
+</body>
+</template>>
