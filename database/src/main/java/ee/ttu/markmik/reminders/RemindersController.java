@@ -3,6 +3,8 @@ package ee.ttu.markmik.reminders;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import ee.ttu.markmik.notes.Notes;
+
 import java.util.List;
 
 @RestController
@@ -25,9 +27,15 @@ public class RemindersController {
         return reminderService.getAllReminders();
     }
 
+    
+   
     @RequestMapping(value = "/reminders/{id}", method=RequestMethod.GET)
-    public Reminders getReminder(@PathVariable("userId") long userId) {
-        return reminderService.getRemindersById(userId);
+    public List<Reminders> searchReminders(@PathVariable("id") long usercode) {
+        return reminderService.searchRemindersByUsercode(usercode);
+    }
+    @RequestMapping(value = "/reminders/late/{id}", method=RequestMethod.GET)
+    public List<Reminders> getAllRemindersDate(@PathVariable("id") long usercode) {
+        return reminderService.searchByAlarmDate(usercode);
     }
     
     @DeleteMapping(value = "/reminders/{id}")

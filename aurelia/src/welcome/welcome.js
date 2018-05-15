@@ -28,6 +28,7 @@ export class Welcome {
       }).then(() => {
         	
 			console.log("kustutas ");
+			document.location.href = '/#/welcomered';
 
       });
   	}

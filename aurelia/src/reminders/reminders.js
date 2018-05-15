@@ -45,7 +45,7 @@ export class Reminders {
       }).then(() => {
         	
 			console.log("kustutas ");
-			document.location.href = '/#/Reminders';
+			document.location.href = '/#/Reminderred';
 			
 
       });
