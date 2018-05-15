@@ -3,6 +3,8 @@ package ee.ttu.markmik.reminders;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import ee.ttu.markmik.notes.Notes;
+
 import java.util.List;
 
 @Service
@@ -23,8 +25,11 @@ public class RemindersService {
         return reminderRepository.findAll();
     }
 
-    public Reminders getRemindersById(long userId) {
-        return reminderRepository.findOne(userId);
+    List<Reminders> searchRemindersByUsercode(long usercode) {
+        return reminderRepository.findByUsercode(usercode);
+    }
+    List<Reminders> searchByAlarmDate(long usercode) {
+        return reminderRepository.findByDate(usercode);
     }
     
     public void deleteReminderById(long reminderId) {

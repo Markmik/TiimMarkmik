@@ -17,7 +17,7 @@ public class User {
     @GeneratedValue
     private Long userid;
     @Column(unique=true)
-    private String eMail;
+    private String email;
     private String username;
     private String password;
     

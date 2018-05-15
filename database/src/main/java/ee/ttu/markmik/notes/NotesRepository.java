@@ -16,6 +16,6 @@ public interface NotesRepository extends CrudRepository<Notes, Long> {
     
     @Query("SELECT U FROM Notes U"
 			+ " WHERE U.usercode=:usercode"
-			+ " GROUP BY U")
+			+ " ORDER BY (U.id) DESC")
     public List<Notes> findByUsercode(@Param("usercode") long usercode);
 }
