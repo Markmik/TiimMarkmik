@@ -1,4 +1,4 @@
-package ee.ttu.markmik.remindersTest;
+package ee.ttu.markmik.Test;
 
 import org.hamcrest.Matchers;
 import org.junit.Assert;
@@ -71,7 +71,7 @@ public class UserControllerTest {
     
     @Test
     public void getUser() throws Exception {
-        
+    	Mockito.when(userService.getUserById(1)).thenReturn(user1);
         
         mockMvc.perform(get("/users/1"))
                 .andExpect(status().isOk())
